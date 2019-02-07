@@ -1,0 +1,66 @@
+.box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+
+  height: auto;
+  width: auto;
+}
+
+
+.box input[type="text"]{
+  background: white;
+  color: #3D3D3D;
+  padding: 5px;
+  width: 200px;
+  height: 28px;
+  border: 1px solid #3D3D3D;
+  border-radius: .5rem;
+  font-size: 12px;
+  -webkit-appearance: button;
+  outline:none;
+  
+  cursor: pointer;
+}
+
+.box::before{
+  content: "\f0d7";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 20px;
+  
+  position:absolute;
+  line-height: 40px;
+  color:white;
+
+  text-align:center;
+  top:0;
+  right:0;
+  
+  width:40px;
+  height:38px;
+  border: 1px solid #318989;
+  border-top-right-radius:.5rem;
+  border-bottom-right-radius:.5rem;
+  background: #318989;
+}
+
+
+.box:focus{
+  background-color: RED; 
+}
+
+.box > option{
+  width: 100px;
+}
+
+.optionSelect{
+  display:none;
+}
+
+.optionSelect.active{
+  display: block;
+}
+
