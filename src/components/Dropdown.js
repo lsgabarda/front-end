@@ -35,16 +35,16 @@ class Dropdown extends Component{
   render(){
     return(
 
-      <div className="box">
-        <input type="text" value={this.state.dropdownValue} onMouseDown={this.dropdownCheck} readOnly/>  
+      <div className="box" onBlur={this.dropdownDown} onMouseDown={this.dropdownCheck}>
+        <input type="button" value={this.state.dropdownValue}  onBlur={this.dropdownDown}  readOnly/>  
         <div className={'optionSelect ' + (this.state.active? 'active' : ' ')} >
-          <ul>
+          <ul className="selectOption">
             {
               this.props.options.map((selectValue, selectKey)=>{
                 return(
-                  <p key={selectKey}>
+                  <li key={selectKey}>
                    <button value={selectValue.toString()} key={selectKey} onMouseDown={this.selectOption}>{selectValue} </button>
-                  </p>
+                  </li>
                   
                 );
               })
